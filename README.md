@@ -23,7 +23,7 @@ In this project, I will be implementing some key features from Go, such as:
 
 ## Authors
 
-* **Kevin Andrio** - Backend - *Initial work* - Github [ellvisca](https://github.com/ellvisca) or Gitlab [ellvisca](https://gitlab.com/ellvisca)
+* Kevin Andrio - [ellvisca](https://github.com/ellvisca)
 
 ## Acknowledgements
 
