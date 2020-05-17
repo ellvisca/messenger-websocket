@@ -13,11 +13,13 @@ In this project, I will be implementing some key features from Go, such as:
 ### Programming Language
 * [Go](https://golang.org/)
 
+### Gorilla
+* [Gorilla](https://www.gorillatoolkit.org/)
+* [Gorilla Websocket](https://github.com/gorilla/websocket)
 
-### Web Toolkit
-* [Gorilla](https://www.gorillatoolkit.org/) - Web Toolkit
-
-* [Redis]() - 
+### Redis
+* [Redis](https://redis.io/)
+* [Redislabs](https://redislabs.com/)
 
 ## Authors
 
@@ -27,6 +29,10 @@ In this project, I will be implementing some key features from Go, such as:
 
 * Special thanks to Sung Park as author's mentor - [sungjwpark](https://github.com/sungwjpark)
 * Special thanks to Julius Wijanarko as author's mentor - 
+
+## References
+
+* Modeled after heroku-examples - [go-websocket-chat-demo](https://github.com/heroku-examples/go-websocket-chat-demo)
 
 ### Other Links
 Checkout the REST API version for this project
