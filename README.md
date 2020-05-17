@@ -19,6 +19,7 @@ In this project, I will be implementing some key features from Go, such as:
 
 ### Redis
 * [Redis](https://redis.io/)
+* [Redigo](https://github.com/gomodule/redigo)
 * [Redislabs](https://redislabs.com/)
 
 ## Authors
