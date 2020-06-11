@@ -33,13 +33,10 @@ func newPool(addr string) *redis.Pool {
 
 func main() {
 	err := godotenv.Load()
-	if err != nil {
-		log.Println("Error loading .env file")
-	}
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8000"
+		port = "8080"
 	}
 
 	redisURL := os.Getenv("REDIS_URL")

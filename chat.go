@@ -42,10 +42,12 @@ func serveWs(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	upgrader.CheckOrigin = func(r *http.Request) bool { return true }
+
 	// WS upgrader
 	ws, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
-		log.Println("Error upgrader")
+		log.Println(err)
 		http.Error(w, "Error upgrader", http.StatusBadRequest)
 		return
 	}
