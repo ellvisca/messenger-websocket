@@ -6,6 +6,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/ellvisca/messenger-websocket/controllers"
+	u "github.com/ellvisca/messenger-websocket/utils"
 	"github.com/gomodule/redigo/redis"
 	"github.com/joho/godotenv"
 )
@@ -29,6 +31,10 @@ func newPool(addr string) *redis.Pool {
 			return c, nil
 		},
 	}
+}
+
+func Home(w http.ResponseWriter, r *http.Request) {
+	u.Respond(w, u.Message(true, "Welcome to API"))
 }
 
 func main() {
@@ -67,10 +73,13 @@ func main() {
 	}()
 
 	// Serve home
-	http.Handle("/", http.FileServer(http.Dir("./public")))
+	http.HandleFunc("/", Home)
 
 	// Serve ws
 	http.HandleFunc("/ws", serveWs)
+
+	// Create client
+	http.HandleFunc("/api/v1/client", controllers.CreateClient)
 
 	log.Println("Listening on port", port)
 	log.Println(http.ListenAndServe(":"+port, nil))
