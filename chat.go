@@ -14,13 +14,13 @@ var upgrader = websocket.Upgrader{
 	WriteBufferSize: 1024,
 }
 
-type message struct {
+type Message struct {
 	Client string `json:"client"`
 	Text   string `json:"text"`
 }
 
-func validateMessage(data []byte) (message, error) {
-	var msg message
+func validateMessage(data []byte) (Message, error) {
+	var msg Message
 
 	err := json.Unmarshal(data, &msg)
 	if err != nil {
